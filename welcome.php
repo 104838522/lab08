@@ -1,3 +1,5 @@
+<?php include "header.inc"; ?>
+
 <?php
 session_start();
 
@@ -7,8 +9,6 @@ if (isset($_SESSION['user'])) {
     header("Location: login.php");
 }
 ?>
-
-<?php include "header.inc"; ?>
 
 <h1>Login success, <?php echo $_SESSION['user']; ?>!</h1>
 
