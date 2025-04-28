@@ -1,0 +1,15 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['user'])) {
+    echo"Welcome," .$_SESSION['user'];
+}else{
+    header("Location: login.php");
+}
+?>
+
+<?php include "header.inc"; ?>
+
+<h1>Welcome, <?php echo $_SESSION['user']; ?>!</h1>
+
+<?php include "footer.inc"; ?>
